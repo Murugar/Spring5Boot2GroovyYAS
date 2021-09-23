@@ -10,13 +10,13 @@ import com.iqmsoft.TestObject
 
 @RestController
 class MainController{
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public sayHello(){
-        return "Hello"
+        return "Hello From Groovy"
     }
 
     @RequestMapping(name =  "/testpost", method = RequestMethod.POST)
-    public ResponseEntity<TestObject> sendNudes(@RequestBody TestObject exampleObject){
+    public ResponseEntity<TestObject> sendPics(@RequestBody TestObject exampleObject){
         return new ResponseEntity<TestObject>(exampleObject, HttpStatus.OK)
     }
 
